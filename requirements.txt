@@ -1,0 +1,13 @@
+langchain
+langchain-core
+
+lanchain-openai
+openai
+
+langchain-anthropic
+
+lanchain-google-genai
+
+google-generativeai
+
+lanchain--huggingface
