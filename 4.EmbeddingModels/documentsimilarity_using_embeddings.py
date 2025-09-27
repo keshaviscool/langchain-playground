@@ -23,17 +23,17 @@ documents = [
     "Jasprit Bumrah is an Indian Fast bowler known for his unorthodox action and yorkers"
 ]
 
-query = 'tell me about rohit sharma'
+query = 'who the fuck is virat koli'
 
 doc_embeds = embeddings.embed_documents(documents)
 query_embed = embeddings.embed_query(query)
 
 similarity_scores = cosine_similarity([query_embed], doc_embeds)[0] # always give 2D vector
+print(similarity_scores)
+# sorted_scores = sorted(list(enumerate(similarity_scores)), key = lambda x: x[1])
 
-sorted_scores = sorted(list(enumerate(similarity_scores)), key = lambda x: x[1])
+# doc_index = sorted_scores[-1][0]
 
-doc_index = sorted_scores[-1][0]
+# result_Doc = documents[doc_index]
 
-result_Doc = documents[doc_index]
-
-print(result_Doc)
+# print(result_Doc)
